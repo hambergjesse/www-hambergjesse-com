@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "concurrently \"npx jest\" \"eslint . --ext .ts,.tsx\"",
+    "test": "concurrently \"npx jest --passWithNoTests\" \"eslint . --ext .ts,.tsx\"",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -32,6 +32,8 @@
     "jsdom": "^21.1.1",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
     "typescript": "^5.0.4",
     "vite": "^4.2.0",
     "vite-plugin-eslint": "^1.8.1"
@@ -39,7 +41,7 @@
   "lint-staged": {
     "*.{ts,tsx,html}": [
       "prettier --write",
-      "jest --bail --findRelatedTests",
+      "jest --bail --findRelatedTests --passWithNoTests",
       "eslint --fix"
     ]
   }

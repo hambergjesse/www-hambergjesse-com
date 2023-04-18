@@ -1,7 +1,9 @@
+import Landing from "./pages/Landing/Landing";
+
 const App = () => {
   return (
     <div className="app__wrapper">
-      <h1>test</h1>
+      <Landing />
     </div>
   );
 };

@@ -1,4 +1,5 @@
-$portfolio-black: #292a32;
+$portfolio-black: #19191f;
+$portfolio-highlight: #292933;
 $portfolio-white: #ecedf3;
 $portfolio-grey: #96979b;
 $portfolio-red: #ff3b52;
@@ -52,6 +53,12 @@ input {
 body {
   overflow-x: hidden;
   position: relative;
+  background: rgb(25, 25, 31);
+  background: radial-gradient(
+    circle,
+    rgba(25, 25, 31, 1) 0%,
+    rgba(41, 41, 51, 1) 100%
+  );
   width: 100vw;
   height: 100%;
 
@@ -71,7 +78,7 @@ body {
   li {
     font-family: museo-sans;
     text-transform: uppercase;
-    color: $portfolio-black;
+    color: $portfolio-white;
     font-weight: 700;
   }
 
@@ -105,16 +112,17 @@ body {
     line-height: 30px;
   }
 
-  li {
-    font-size: $font-size-li;
+  p,
+  li,
+  a {
+    font-size: $font-size-mobile;
     font-family: area-normal;
+    color: $portfolio-grey;
     font-weight: 500;
   }
 
-  p {
-    font-size: $font-size-mobile;
-    font-family: area-normal;
-    font-weight: 500;
+  li {
+    font-size: $font-size-li;
   }
 }
 

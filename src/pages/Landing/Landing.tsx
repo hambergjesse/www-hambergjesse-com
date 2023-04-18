@@ -1,24 +1,17 @@
+import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Copyright } from "../../components/Copyright/Copyright";
-import { SectionInt } from "./Section";
-import { Section } from "./Section";
+import { Sections } from "./Sections";
 
 const Landing = () => {
-  const sectionsList: SectionInt[] = [
-    { text: "Software" },
-    { text: "Design" },
-    { text: "Art" },
-  ];
-
   return (
     <main className="landingPage__wrapper">
       <BrandLogo />
       <div className="landingPage__container">
-        {sectionsList.map((item, index: number) => (
-          <Section text={item.text} key={index} />
-        ))}
+        <Sections />
       </div>
       <Copyright />
+      <Background />
     </main>
   );
 };

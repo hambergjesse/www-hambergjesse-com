@@ -11,7 +11,7 @@ export const Copyright = () => {
     flexDirection: "column",
     alignItems: "center",
     position: "absolute",
-    bottom: "37.5px",
+    bottom: "50px",
     gap: "6px",
   };
 

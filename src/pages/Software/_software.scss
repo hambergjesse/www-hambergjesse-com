@@ -1,0 +1,137 @@
+main.softwarePage__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+  height: 100%;
+  width: 100%;
+
+  img#brand-logo {
+    position: unset !important;
+  }
+
+  section.copyright__container {
+    position: unset !important;
+  }
+
+  div.softwarePage__container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    h2 {
+      margin-bottom: 35px;
+      color: transparent;
+      -webkit-text-stroke: 1px $portfolio-grey;
+
+      @include responsive(large_mobile) {
+        font-size: 42px;
+        line-height: 42px;
+      }
+
+      @include responsive(tablet) {
+        font-size: 64px;
+        line-height: 64px;
+      }
+
+      @include responsive(laptop) {
+        font-size: 72px;
+        line-height: 72px;
+      }
+
+      @include responsive(large_laptop) {
+        font-size: 82px;
+        line-height: 82px;
+      }
+    }
+
+    section.softwarePage__projects {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 25px;
+      width: 100%;
+
+      div.softwarePage__projects--list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        div.softwarePage__projects--list-item {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          border: 1px solid $portfolio-highlight;
+          box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+          background: $portfolio-black;
+          border-radius: 15px;
+          padding: 25px;
+          display: flex;
+          max-width: 300px;
+          width: auto;
+          gap: 15px;
+
+          img {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            object-fit: cover;
+            border-radius: 15px;
+            filter: grayscale(100%);
+            transition: ease-in-out 0.1s;
+
+            &:hover {
+              filter: grayscale(0%);
+            }
+          }
+        }
+      }
+    }
+
+    section.softwarePage__experience {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 25px 50px 25px;
+      width: 100%;
+
+      div.softwarePage__experience--list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1080px;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        div.softwarePage__experience--list-item {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          border: 1px solid $portfolio-highlight;
+          box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+          background: $portfolio-black;
+          border-radius: 15px;
+          padding: 25px;
+          display: flex;
+          max-width: 500px;
+          width: auto;
+          gap: 15px;
+        }
+      }
+    }
+  }
+}

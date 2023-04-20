@@ -11,6 +11,7 @@ export const Background = () => {
     width: "50%",
     zIndex: "-1",
     right: "0",
+    top: "0",
   };
 
   return <div className="background__wrapper" style={backgroundStyle}></div>;

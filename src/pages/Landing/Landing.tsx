@@ -1,7 +1,7 @@
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Copyright } from "../../components/Copyright/Copyright";
-import { Sections } from "./Sections";
+import { Sections } from "./components/Sections";
 
 const Landing = () => {
   return (

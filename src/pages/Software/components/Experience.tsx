@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type ExperienceItem = {
   title: string;
   company: string;
@@ -11,6 +13,26 @@ const Experience_Item = ({
   summary,
   duration,
 }: ExperienceItem) => {
+  const [showSummary, setShowSummary] = useState(false);
+
+  const toggleSummary = () => {
+    setShowSummary(!showSummary);
+  };
+
+  const firstSentence = summary.split(".")[0];
+  const remainingSentences = summary.slice(firstSentence.length).trim();
+
+  // adjust the length of the remaining sentences based on the length of the first sentence
+  const maxRemainingSentencesLength = 500 - firstSentence.length;
+  const truncatedRemainingSentences =
+    remainingSentences.length > maxRemainingSentencesLength
+      ? `${remainingSentences.slice(0, maxRemainingSentencesLength)}...`
+      : remainingSentences;
+
+  const displaySummary = showSummary
+    ? `${firstSentence}${truncatedRemainingSentences}`
+    : `${summary.slice(0, 150)}...`;
+
   return (
     <div className="softwarePage__experience--list-item">
       <p style={{ color: "#ecedf3", fontSize: "20px", lineHeight: "auto" }}>
@@ -20,7 +42,12 @@ const Experience_Item = ({
         {title}
       </p>
       <p>{duration}</p>
-      <p>{summary}</p>
+      <p>{displaySummary}</p>
+      {summary.length > 150 && (
+        <button onClick={toggleSummary}>
+          {showSummary ? "Hide Summary" : "Show More"}
+        </button>
+      )}
     </div>
   );
 };

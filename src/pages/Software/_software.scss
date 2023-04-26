@@ -74,6 +74,7 @@ main.softwarePage__wrapper {
           text-align: center;
           border: 1px solid $portfolio-highlight;
           box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+          transition: ease-in-out 0.15s;
           background: $portfolio-black;
           border-radius: 15px;
           padding: 25px;
@@ -81,6 +82,10 @@ main.softwarePage__wrapper {
           max-width: 300px;
           width: auto;
           gap: 15px;
+
+          &:hover {
+            border: 1px solid $portfolio-grey;
+          }
 
           img {
             width: 200px;
@@ -123,6 +128,7 @@ main.softwarePage__wrapper {
           text-align: center;
           border: 1px solid $portfolio-highlight;
           box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+          transition: ease-in-out 0.15s;
           background: $portfolio-black;
           border-radius: 15px;
           padding: 25px;
@@ -130,6 +136,104 @@ main.softwarePage__wrapper {
           max-width: 500px;
           width: auto;
           gap: 15px;
+
+          &:hover {
+            border: 1px solid $portfolio-grey;
+          }
+
+          strong {
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    section.softwarePage__technologies {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 25px 50px 25px;
+      width: 100%;
+
+      ul.softwarePage__technologies--list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        max-width: 1000px;
+        gap: 6.25px;
+
+        @include responsive(large_mobile) {
+          gap: 12.5px;
+        }
+
+        @include responsive(tablet) {
+          gap: 15px;
+        }
+
+        @include responsive(laptop) {
+          gap: 17.5px;
+        }
+
+        @include responsive(large_laptop) {
+          gap: 20px;
+        }
+
+        li.softwarePage__technologies--list-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          border: 1px solid $portfolio-highlight;
+          box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+          transition: ease-in-out 0.15s;
+          background: $portfolio-black;
+          border-radius: 15px;
+          padding: 7.5px;
+          display: flex;
+          height: 50px;
+          width: 50px;
+          gap: 15px;
+
+          @include responsive(large_mobile) {
+            padding: 12.5px;
+            height: 75px;
+            width: 75px;
+          }
+
+          @include responsive(tablet) {
+            height: 100px;
+            width: 100px;
+          }
+
+          @include responsive(laptop) {
+            height: 125px;
+            width: 125px;
+          }
+
+          @include responsive(large_laptop) {
+            height: 150px;
+            width: 150px;
+          }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+
+            svg {
+              transition: ease-in-out 0.15s;
+              fill: $portfolio-grey;
+              height: 75%;
+              width: 75%;
+
+              &:hover {
+                fill: $portfolio-white;
+              }
+            }
+          }
         }
       }
     }

@@ -4,6 +4,7 @@ import { Copyright } from "../../components/Copyright/Copyright";
 
 import { Projects } from "./components/Projects";
 import { Experience } from "./components/Experience";
+import { Technologies } from "./components/Technologies";
 import { Socials } from "../../components/Socials/Socials";
 
 const Software = () => {
@@ -13,6 +14,7 @@ const Software = () => {
       <div className="softwarePage__container">
         <Projects />
         <Experience />
+        <Technologies />
         <Socials />
       </div>
       <Copyright />

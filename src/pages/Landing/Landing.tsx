@@ -1,4 +1,5 @@
 import { Background } from "../../components/Background/Background";
+import { Background_Image } from "./components/Background_Image";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Copyright } from "../../components/Copyright/Copyright";
 import { Sections } from "./components/Sections";
@@ -12,6 +13,7 @@ const Landing = () => {
       </div>
       <Copyright />
       <Background />
+      <Background_Image img={"src/pages/Landing/assets/background-img.webp"} />
     </main>
   );
 };

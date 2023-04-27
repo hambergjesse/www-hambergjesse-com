@@ -85,6 +85,7 @@ main.softwarePage__wrapper {
 
           &:hover {
             border: 1px solid $portfolio-grey;
+            transform: scale(1.025);
           }
 
           img {
@@ -139,6 +140,7 @@ main.softwarePage__wrapper {
 
           &:hover {
             border: 1px solid $portfolio-grey;
+            transform: scale(1.025);
           }
 
           strong {
@@ -231,6 +233,7 @@ main.softwarePage__wrapper {
 
               &:hover {
                 fill: $portfolio-white;
+                transform: scale(1.05);
               }
             }
           }

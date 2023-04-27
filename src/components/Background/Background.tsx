@@ -7,7 +7,7 @@ export const Background = () => {
     background: "#292933",
     position: "absolute",
     height: "100%",
-    opacity: "35%",
+    opacity: "50%",
     width: "50%",
     zIndex: "-1",
     right: "0",

@@ -40,27 +40,66 @@ export const Technologies = () => {
   };
 
   const tech_list: TechList[] = [
-    { icon: <SiTypescript />, link: "https://www.typescriptlang.org/" },
-    { icon: <SiJavascript />, link: "https://www.javascript.com/" },
-    { icon: <SiReact />, link: "https://react.dev/" },
     {
-      icon: <SiHtml5 />,
+      icon: <SiTypescript style={{ fill: "#3178C6" }} />,
+      link: "https://www.typescriptlang.org/",
+    },
+    {
+      icon: <SiJavascript style={{ fill: "#FCDC00" }} />,
+      link: "https://www.javascript.com/",
+    },
+    {
+      icon: <SiReact style={{ fill: "#149ECA" }} />,
+      link: "https://react.dev/",
+    },
+    {
+      icon: <SiHtml5 style={{ fill: "#E36028" }} />,
       link: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",
     },
     {
-      icon: <SiCss3 />,
+      icon: <SiCss3 style={{ fill: "#3963E9" }} />,
       link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
-    { icon: <SiSass />, link: "https://sass-lang.com/" },
-    { icon: <SiNodedotjs />, link: "https://nodejs.org/en" },
-    { icon: <SiExpress />, link: "https://expressjs.com/" },
-    { icon: <SiMongodb />, link: "https://www.mongodb.com/" },
-    { icon: <SiGithub />, link: "https://github.com/" },
-    { icon: <SiGoogle />, link: "https://google.com/" },
-    { icon: <SiJest />, link: "https://jestjs.io/" },
-    { icon: <SiEslint />, link: "https://eslint.org/" },
-    { icon: <SiAdobe />, link: "https://www.adobe.com/" },
-    { icon: <SiFigma />, link: "https://www.figma.com/" },
+    {
+      icon: <SiSass style={{ fill: "#CF649A" }} />,
+      link: "https://sass-lang.com/",
+    },
+    {
+      icon: <SiNodedotjs style={{ fill: "#89BB3C" }} />,
+      link: "https://nodejs.org/en",
+    },
+    {
+      icon: <SiExpress style={{ fill: "#FFFFFF" }} />,
+      link: "https://expressjs.com/",
+    },
+    {
+      icon: <SiMongodb style={{ fill: "#0FA14C" }} />,
+      link: "https://www.mongodb.com/",
+    },
+    {
+      icon: <SiGithub style={{ fill: "#FFFFFF" }} />,
+      link: "https://github.com/",
+    },
+    {
+      icon: <SiGoogle style={{ fill: "#3F7EE8" }} />,
+      link: "https://google.com/",
+    },
+    {
+      icon: <SiJest style={{ fill: "#853957" }} />,
+      link: "https://jestjs.io/",
+    },
+    {
+      icon: <SiEslint style={{ fill: "#472FB9" }} />,
+      link: "https://eslint.org/",
+    },
+    {
+      icon: <SiAdobe style={{ fill: "#FA0400" }} />,
+      link: "https://www.adobe.com/",
+    },
+    {
+      icon: <SiFigma style={{ fill: "#04D082" }} />,
+      link: "https://www.figma.com/",
+    },
   ];
 
   return (

@@ -8,37 +8,86 @@ main.designPage__wrapper {
   height: 100%;
   width: 100%;
 
+  img#brand-logo {
+    position: unset !important;
+  }
+
+  section.copyright__container {
+    position: unset !important;
+  }
+
   div.designPage__container {
     display: flex;
+    position: relative;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 50px 25px 75px 25px;
-    flex-wrap: wrap;
-    gap: 50px;
+    height: 100%;
+    width: 100%;
 
-    h2 {
-      color: transparent;
-      -webkit-text-stroke: 1px $portfolio-grey;
+    section.designPage__introduction {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      padding: 25px 25px 0px 25px;
+      width: 100%;
+      gap: 35px;
 
-      @include responsive(large_mobile) {
-        font-size: 42px;
-        line-height: 42px;
+      h1 {
+        @include responsive(mobile) {
+          font-size: 46px;
+          line-height: 46px;
+        }
+
+        @include responsive(large_mobile) {
+          font-size: 52px;
+          line-height: 52px;
+        }
+
+        @include responsive(tablet) {
+          font-size: 82px;
+          line-height: 82px;
+        }
+
+        @include responsive(laptop) {
+          font-size: 100px;
+          line-height: 100px;
+        }
+
+        @include responsive(large_laptop) {
+          font-size: 122px;
+          line-height: 122px;
+        }
       }
 
-      @include responsive(tablet) {
-        font-size: 64px;
-        line-height: 64px;
-      }
+      p {
+        line-height: 18px;
 
-      @include responsive(laptop) {
-        font-size: 72px;
-        line-height: 72px;
-      }
+        @include responsive(tablet) {
+          width: 85%;
+        }
 
-      @include responsive(large_laptop) {
-        font-size: 82px;
-        line-height: 82px;
+        @include responsive(laptop) {
+          width: 70%;
+        }
+
+        @include responsive(large_laptop) {
+          width: 60%;
+        }
+
+        @include responsive(small_desktop) {
+          width: 55%;
+        }
+
+        @include responsive(desktop) {
+          width: 50%;
+        }
+
+        @include responsive(large_desktop) {
+          width: 45%;
+        }
       }
     }
 
@@ -46,6 +95,7 @@ main.designPage__wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 50px 0px;
       flex-wrap: wrap;
       gap: 25px;
 
@@ -65,7 +115,6 @@ main.designPage__wrapper {
 
         img {
           transition: ease-in-out 0.15s;
-          filter: grayscale(50%);
           border-radius: 15px;
           object-fit: contain;
           cursor: pointer;
@@ -90,10 +139,6 @@ main.designPage__wrapper {
           @include responsive(large_laptop) {
             max-height: 500px;
             height: auto;
-          }
-
-          &:hover {
-            filter: grayscale(0%);
           }
         }
 

@@ -1,0 +1,59 @@
+main.navigation__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  margin: 25px;
+  height: 50px;
+  width: auto;
+
+  @include responsive(small_mobile) {
+    display: none;
+  }
+
+  @include responsive(mobile) {
+    display: none;
+  }
+
+  @include responsive(large_mobile) {
+    display: block;
+  }
+
+  div.navigation__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $portfolio-grey;
+    padding: 12.5px 0px;
+    height: auto;
+    width: auto;
+
+    nav.navigation__container--nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 50px;
+      height: auto;
+      width: auto;
+
+      ul.navigation__container--nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        gap: 25px;
+
+        a {
+          height: auto;
+          transition: ease-in-out 0.15s;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $portfolio-white;
+          }
+        }
+      }
+    }
+  }
+}

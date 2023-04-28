@@ -3,14 +3,24 @@ type ProjectItem = {
   description: string;
   image: string;
   link: string;
+  borderColor: string;
 };
 
-const Project = ({ name, description, image, link }: ProjectItem) => {
+const Project = ({
+  name,
+  description,
+  image,
+  link,
+  borderColor,
+}: ProjectItem) => {
   const slicedDescription: string =
     description.length < 50 ? description.slice(0, 50) + "..." : description;
 
   return (
-    <div className="softwarePage__projects--list-item">
+    <div
+      className="softwarePage__projects--list-item"
+      style={{ border: `1px solid ${borderColor}` }}
+    >
       <a href={link} target="_blank" rel="noreferrer">
         <img src={image} alt="" />
       </a>
@@ -29,6 +39,7 @@ export const Projects = () => {
       description: "The renewed website for Virittämö Helsinki - 2023 edition.",
       image: "src/pages/Software/components/assets/projects/virittamo.webp",
       link: "https://github.com/hambergjesse/virittamo-website",
+      borderColor: "#F5A3C7",
     },
     {
       name: "OnlyWeights",
@@ -36,6 +47,7 @@ export const Projects = () => {
         "Gym companion app designed to make workout routines easier and more efficient.",
       image: "src/pages/Software/components/assets/projects/onlyweights.webp",
       link: "https://github.com/hambergjesse/only-weights-app",
+      borderColor: "#FBA701",
     },
     {
       name: "Saukko App",
@@ -43,6 +55,7 @@ export const Projects = () => {
         "A degree completion service for employed students - requested by StadinAO / City of Helsinki.",
       image: "src/pages/Software/components/assets/projects/saukko.webp",
       link: "https://stadinao.fi/",
+      borderColor: "#9FC9EB",
     },
   ];
 
@@ -56,6 +69,7 @@ export const Projects = () => {
             description={item.description}
             image={item.image}
             link={item.link}
+            borderColor={item.borderColor}
             key={index}
           />
         ))}

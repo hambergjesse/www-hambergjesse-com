@@ -1,13 +1,15 @@
 // import fonts
 @import "./fonts/fonts";
 
-// import boilerplate base
-@import "./base";
-
 // import responsiveness breakpoints
 @import "./responsive";
+
+// import boilerplate base
+@import "./base";
 
 // import page styling
 @import "../pages/Landing/landing";
 @import "../pages/Software/software";
 @import "../pages/Design/design";
+
+@import "../components/Navigation/navigation";

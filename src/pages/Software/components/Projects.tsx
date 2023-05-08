@@ -35,13 +35,6 @@ const Project = ({
 export const Projects = () => {
   const projects: ProjectItem[] = [
     {
-      name: "Virittämö Website",
-      description: "The renewed website for Virittämö Helsinki - 2023 edition.",
-      image: "src/pages/Software/components/assets/projects/virittamo.webp",
-      link: "https://github.com/hambergjesse/virittamo-website",
-      borderColor: "#F5A3C7",
-    },
-    {
       name: "OnlyWeights",
       description:
         "Gym companion app designed to make workout routines easier and more efficient.",
@@ -56,6 +49,13 @@ export const Projects = () => {
       image: "src/pages/Software/components/assets/projects/saukko.webp",
       link: "https://stadinao.fi/",
       borderColor: "#9FC9EB",
+    },
+    {
+      name: "Virittämö Website",
+      description: "The renewed website for Virittämö Helsinki - 2023 edition.",
+      image: "src/pages/Software/components/assets/projects/virittamo.webp",
+      link: "https://github.com/hambergjesse/virittamo-website",
+      borderColor: "#F5A3C7",
     },
   ];
 

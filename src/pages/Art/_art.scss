@@ -1,0 +1,174 @@
+main.artPage__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+  height: 100%;
+  width: 100%;
+
+  img#brand-logo {
+    position: unset !important;
+  }
+
+  section.copyright__container {
+    position: unset !important;
+  }
+
+  div.artPage__container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10%;
+    padding-bottom: 50px;
+    height: 100%;
+    width: 100%;
+    gap: 50px;
+
+    section.artPage__introduction {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 25px;
+      width: 100%;
+      gap: 35px;
+
+      h1 {
+        @include responsive(mobile) {
+          font-size: 46px;
+          line-height: 46px;
+        }
+
+        @include responsive(large_mobile) {
+          font-size: 52px;
+          line-height: 52px;
+        }
+
+        @include responsive(tablet) {
+          font-size: 82px;
+          line-height: 82px;
+        }
+
+        @include responsive(laptop) {
+          font-size: 100px;
+          line-height: 100px;
+        }
+
+        @include responsive(large_laptop) {
+          font-size: 122px;
+          line-height: 122px;
+        }
+      }
+
+      p {
+        line-height: 18px;
+
+        @include responsive(tablet) {
+          width: 85%;
+        }
+
+        @include responsive(laptop) {
+          width: 70%;
+        }
+
+        @include responsive(large_laptop) {
+          width: 60%;
+        }
+
+        @include responsive(small_desktop) {
+          width: 55%;
+        }
+
+        @include responsive(desktop) {
+          width: 50%;
+        }
+
+        @include responsive(large_desktop) {
+          width: 45%;
+        }
+      }
+    }
+
+    section.artPage__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      div.artPage__list--item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid $portfolio-highlight;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        transition: ease-in-out 0.15s;
+        background: $portfolio-black;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 1350px;
+        padding: 25px;
+        height: auto;
+        width: auto;
+        gap: 25px;
+
+        @include responsive(laptop) {
+          min-width: 1050px;
+          flex-direction: row;
+          padding: 50px;
+          gap: 50px;
+        }
+
+        img {
+          max-height: 960px;
+          height: auto;
+          width: auto;
+          border-radius: 15px;
+          cursor: pointer;
+
+          @include responsive(laptop) {
+            max-height: 720px;
+          }
+        }
+
+        div.artPage__list--item-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 25px;
+
+          @include responsive(laptop) {
+            align-items: flex-start;
+            text-align: start;
+          }
+
+          button {
+            border: 1px solid $portfolio-highlight;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            transition: ease-in-out 0.15s;
+            background: $portfolio-white;
+            color: $portfolio-black;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 12.5px;
+          }
+        }
+      }
+
+      div.artPage__list--item:nth-child(even) {
+        flex-direction: column;
+
+        @include responsive(laptop) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}

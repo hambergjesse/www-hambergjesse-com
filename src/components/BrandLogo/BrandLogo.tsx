@@ -19,7 +19,7 @@ export const BrandLogo = () => {
     <img
       id="brand-logo"
       style={imgStyle}
-      src="src/components/BrandLogo/assets/logo.webp"
+      src="/assets/logo.webp"
       alt="Jesse Hamberg's logo"
       onClick={() => navigate("/")}
     />

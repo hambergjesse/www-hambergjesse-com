@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Navigation } from "../../components/Navigation/Navigation";
@@ -14,7 +16,12 @@ const Software = () => {
       <BrandLogo />
       <Navigation />
       <div className="softwarePage__container">
-        <section className="softwarePage__introduction">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.75 }}
+          className="softwarePage__introduction"
+        >
           <h1>Software</h1>
           <p>
             Welcome to my software development portfolio, where I showcase my
@@ -26,7 +33,7 @@ const Software = () => {
             several projects developed for various clients, each tailored to
             their unique needs and requirements.
           </p>
-        </section>
+        </motion.section>
         <Projects />
         <Experience />
         <Technologies />

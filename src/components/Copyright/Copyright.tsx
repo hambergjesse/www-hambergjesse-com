@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Copyright = () => {
   const currYear = new Date().getFullYear();
 
@@ -26,11 +28,17 @@ export const Copyright = () => {
   };
 
   return (
-    <section className="copyright__container" style={sectStyle}>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="copyright__container"
+      style={sectStyle}
+    >
       <a href="mailto:contact@hambergjesse.com" style={aStyle}>
         contact@hambergjesse.com
       </a>
       <p style={pStyle}>© {currYear} Jesse Hamberg. All rights reserved.</p>
-    </section>
+    </motion.section>
   );
 };

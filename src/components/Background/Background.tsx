@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Background = () => {
   type Style = {
     [key: string]: string;
@@ -14,5 +16,13 @@ export const Background = () => {
     top: "0",
   };
 
-  return <div className="background__wrapper" style={backgroundStyle}></div>;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.5 }}
+      transition={{ duration: 0.75 }}
+      className="background__wrapper"
+      style={backgroundStyle}
+    ></motion.div>
+  );
 };

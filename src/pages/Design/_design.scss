@@ -137,7 +137,7 @@ main.designPage__wrapper {
           }
 
           @include responsive(large_laptop) {
-            max-height: 500px;
+            max-height: 450px;
             height: auto;
           }
         }

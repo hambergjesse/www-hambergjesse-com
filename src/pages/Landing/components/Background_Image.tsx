@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Background_Image = ({ img }: { img: string }) => {
   type Style = {
     [key: string]: string;
@@ -17,11 +19,14 @@ export const Background_Image = ({ img }: { img: string }) => {
   };
 
   return (
-    <img
+    <motion.img
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.05 }}
+      transition={{ duration: 0.75 }}
       src={img}
       alt="background-image"
       className="background-img"
       style={backgroundStyle}
-    ></img>
+    ></motion.img>
   );
 };

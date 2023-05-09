@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 type ExperienceItem = {
@@ -97,7 +98,12 @@ export const Experience = () => {
     },
   ];
   return (
-    <section className="softwarePage__experience">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      className="softwarePage__experience"
+    >
       <h2>Experience</h2>
       <div className="softwarePage__experience--list">
         {experiences.map((item, index: number) => (
@@ -111,6 +117,6 @@ export const Experience = () => {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };

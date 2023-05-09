@@ -37,6 +37,7 @@
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "react-icons": "^4.8.0",
+    "react-intersection-observer": "^9.4.3",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
     "ts-jest": "^29.1.0",
@@ -45,7 +46,7 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "lint-staged": {
-    "*.{ts,tsx,html}": [
+    "*.{ts,tsx}": [
       "prettier --write",
       "jest --bail --findRelatedTests --passWithNoTests",
       "eslint --fix"

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 export const BrandLogo = () => {
@@ -16,7 +17,10 @@ export const BrandLogo = () => {
   const navigate = useNavigate();
 
   return (
-    <img
+    <motion.img
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id="brand-logo"
       style={imgStyle}
       src="/assets/logo.webp"

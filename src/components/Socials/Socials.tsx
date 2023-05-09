@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { VscGithubInverted, VscTwitter } from "react-icons/vsc";
 import { BsBehance, BsLinkedin } from "react-icons/bs";
 import { MdMailOutline } from "react-icons/md";
@@ -67,10 +68,16 @@ export const Socials = () => {
   ];
 
   return (
-    <div className="socials__container" style={containerStyle}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="socials__container"
+      style={containerStyle}
+    >
       {socials.map((item, index: number) => (
         <Social link={item.link} component={item.component} key={index} />
       ))}
-    </div>
+    </motion.div>
   );
 };

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
@@ -17,13 +18,18 @@ export const Navigation = () => {
     <main className="navigation__wrapper">
       <div className="navigation__container">
         <nav className="navigation__container--nav">
-          <ul className="navigation__container--nav-list">
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="navigation__container--nav-list"
+          >
             {linkArr.map((item, index: number) => (
               <Link to={item.link} key={index}>
                 {item.text}
               </Link>
             ))}
-          </ul>
+          </motion.ul>
         </nav>
       </div>
     </main>

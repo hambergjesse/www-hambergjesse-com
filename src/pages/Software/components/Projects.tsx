@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type ProjectItem = {
   name: string;
   description: string;
@@ -60,7 +62,12 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="softwarePage__projects">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="softwarePage__projects"
+    >
       <h2>Projects</h2>
       <div className="softwarePage__projects--list">
         {projects.map((item, index: number) => (
@@ -74,6 +81,6 @@ export const Projects = () => {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };

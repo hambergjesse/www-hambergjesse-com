@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Navigation } from "../../components/Navigation/Navigation";
@@ -6,14 +8,27 @@ import { Socials } from "../../components/Socials/Socials";
 import { Copyright } from "../../components/Copyright/Copyright";
 
 const Design_Item = ({ image }: { image: string }) => {
+  const [ref, inView] = useInView({ threshold: 0.5 });
+
   const openImage = () => {
     window.open(image, "_blank");
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.75 } },
+  };
+
   return (
-    <div className="designPage__list--item">
+    <motion.div
+      ref={ref}
+      className="designPage__list--item"
+      variants={variants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
       <img src={image} alt="randomized image" onClick={openImage} />
-    </div>
+    </motion.div>
   );
 };
 
@@ -70,7 +85,12 @@ const Design = () => {
       <BrandLogo />
       <Navigation />
       <div className="designPage__container">
-        <section className="designPage__introduction">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.75 }}
+          className="designPage__introduction"
+        >
           <h1>Design work</h1>
           <p>
             Welcome to my design portfolio, where I showcase my extensive
@@ -85,7 +105,7 @@ const Design = () => {
             social media presence, my portfolio demonstrates my ability to
             deliver tailored solutions for every project.
           </p>
-        </section>
+        </motion.section>
         <section className="designPage__list">
           {shuffledImages.map((image, index) => (
             <Design_Item key={index} image={`/assets/Design/${image}`} />

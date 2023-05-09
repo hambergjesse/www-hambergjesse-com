@@ -108,7 +108,6 @@ main.artPage__wrapper {
         align-items: center;
         border: 1px solid $portfolio-highlight;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        transition: ease-in-out 0.15s;
         background: $portfolio-black;
         border-radius: 15px;
         text-align: center;
@@ -126,14 +125,20 @@ main.artPage__wrapper {
         }
 
         img {
+          transition: ease-in-out 0.15s;
           max-height: 960px;
-          height: auto;
-          width: auto;
           border-radius: 15px;
           cursor: pointer;
+          height: auto;
+          width: auto;
 
           @include responsive(laptop) {
             max-height: 720px;
+          }
+
+          &:hover {
+            border: 1px solid $portfolio-grey;
+            transform: scale(1.015);
           }
         }
 

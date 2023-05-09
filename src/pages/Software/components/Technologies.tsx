@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 import {
@@ -103,7 +104,12 @@ export const Technologies = () => {
   ];
 
   return (
-    <section className="softwarePage__technologies">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 3 }}
+      className="softwarePage__technologies"
+    >
       <h2>Tech Skills</h2>
       <ul className="softwarePage__technologies--list">
         {tech_list.map((item, index: number) => (
@@ -112,6 +118,6 @@ export const Technologies = () => {
           </Tech_Item>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 };

@@ -88,10 +88,7 @@ const Design = () => {
         </section>
         <section className="designPage__list">
           {shuffledImages.map((image, index) => (
-            <Design_Item
-              key={index}
-              image={`src/pages/Design/assets/${image}`}
-            />
+            <Design_Item key={index} image={`/assets/Design/${image}`} />
           ))}
         </section>
       </div>

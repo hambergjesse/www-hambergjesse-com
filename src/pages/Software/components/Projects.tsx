@@ -38,7 +38,7 @@ export const Projects = () => {
       name: "OnlyWeights",
       description:
         "Gym companion app designed to make workout routines easier and more efficient.",
-      image: "src/pages/Software/components/assets/projects/onlyweights.webp",
+      image: "/assets/Software/onlyweights.webp",
       link: "https://github.com/hambergjesse/only-weights-app",
       borderColor: "#FBA701",
     },
@@ -46,14 +46,14 @@ export const Projects = () => {
       name: "Saukko App",
       description:
         "A degree completion service for employed students - requested by StadinAO / City of Helsinki.",
-      image: "src/pages/Software/components/assets/projects/saukko.webp",
+      image: "/assets/Software/saukko.webp",
       link: "https://stadinao.fi/",
       borderColor: "#9FC9EB",
     },
     {
       name: "Virittämö Website",
       description: "The renewed website for Virittämö Helsinki - 2023 edition.",
-      image: "src/pages/Software/components/assets/projects/virittamo.webp",
+      image: "/assets/Software/virittamo.webp",
       link: "https://github.com/hambergjesse/virittamo-website",
       borderColor: "#F5A3C7",
     },

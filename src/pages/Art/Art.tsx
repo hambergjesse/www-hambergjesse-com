@@ -128,7 +128,7 @@ const Art = () => {
           {shuffledImages.map((item, index) => (
             <Art_Item
               key={index}
-              image={`src/pages/Art/assets/${item.image}`}
+              image={`/assets/Art/${item.image}`}
               title={item.title}
               desc={item.desc}
               created={item.created}

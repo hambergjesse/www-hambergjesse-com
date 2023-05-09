@@ -13,7 +13,7 @@ const Landing = () => {
       </div>
       <Copyright />
       <Background />
-      <Background_Image img={"src/pages/Landing/assets/background-img.webp"} />
+      <Background_Image img={"/assets/Landing/background-img.webp"} />
     </main>
   );
 };

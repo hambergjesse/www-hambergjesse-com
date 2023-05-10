@@ -67,12 +67,6 @@ const art_images: ArtImage[] = [
 ];
 
 const Art_Item = ({ image, title, desc, created, canvas }: ArtImage) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(false);
-  }, [image]);
-
   const openImage = () => {
     window.open(image, "_blank");
   };
@@ -90,11 +84,6 @@ const Art_Item = ({ image, title, desc, created, canvas }: ArtImage) => {
         data-src={image}
         alt={title}
         onClick={openImage}
-        style={{
-          filter: isLoaded ? "none" : "blur(20px)",
-          visibility: isLoaded ? "visible" : "hidden",
-        }}
-        onLoad={() => setIsLoaded(true)}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75 }}

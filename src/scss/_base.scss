@@ -125,7 +125,7 @@ body {
 
     @include responsive(laptop) {
       font-size: $font-size-normal;
-      line-height: 22px !important;
+      line-height: auto;
     }
   }
 

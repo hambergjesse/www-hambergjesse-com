@@ -19,12 +19,28 @@ export const Copyright = () => {
 
   const aStyle: Style = {
     fontSize: "14px",
+    lineHeight: "16px",
     color: "#ecedf3",
   };
 
   const pStyle: Style = {
     fontSize: "12px",
     color: "#96979b",
+  };
+
+  const bStyle: Style = {
+    fontSize: "14px",
+    color: "#ecedf3",
+    fontWeight: "regular",
+    marginBottom: "6px",
+  };
+
+  // scroll to top of page on button click
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -35,6 +51,14 @@ export const Copyright = () => {
       className="copyright__container"
       style={sectStyle}
     >
+      <button
+        style={bStyle}
+        onClick={() => {
+          scrollToTop();
+        }}
+      >
+        Back to top
+      </button>
       <a href="mailto:contact@hambergjesse.com" style={aStyle}>
         contact@hambergjesse.com
       </a>

@@ -29,10 +29,16 @@ export const Copyright = () => {
   };
 
   const bStyle: Style = {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
     fontSize: "14px",
     color: "#ecedf3",
     fontWeight: "regular",
     marginBottom: "6px",
+    cursor: "pointer",
+    gap: "6px",
   };
 
   // scroll to top of page on button click
@@ -57,6 +63,7 @@ export const Copyright = () => {
           scrollToTop();
         }}
       >
+        <p style={{ color: "#FFFFFF" }}>↑</p>
         Back to top
       </button>
       <a href="mailto:contact@hambergjesse.com" style={aStyle}>

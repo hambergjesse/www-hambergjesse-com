@@ -1,3 +1,4 @@
+import { test, expect } from "vitest";
 import { design_images } from "../Design";
 
 test("Check imageArray for string elements ending with .webp", () => {

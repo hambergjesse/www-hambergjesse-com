@@ -63,6 +63,13 @@ export const design_images: string[] = [
   "27.webp",
   "28.webp",
   "29.webp",
+  "30.webp",
+  "31.webp",
+  "32.webp",
+  "33.webp",
+  "34.webp",
+  "35.webp",
+  "36.webp",
 ];
 
 const Design = () => {

@@ -10,11 +10,14 @@ import { Experience } from "./components/Experience";
 import { Technologies } from "./components/Technologies";
 import { Socials } from "../../components/Socials/Socials";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
+
 const Software = () => {
   return (
     <main className="softwarePage__wrapper">
       <BrandLogo />
       <Navigation />
+      <ScrollToTop />
       <div className="softwarePage__container">
         <motion.section
           initial={{ opacity: 0 }}

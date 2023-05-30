@@ -6,6 +6,7 @@ import { Navigation } from "../../components/Navigation/Navigation";
 import { Socials } from "../../components/Socials/Socials";
 import { Copyright } from "../../components/Copyright/Copyright";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
 interface ArtImage {
   image: string;
   image_lowRes: string;
@@ -124,6 +125,7 @@ const Art = () => {
     <main className="artPage__wrapper">
       <BrandLogo />
       <Navigation />
+      <ScrollToTop />
       <div className="artPage__container">
         <section className="artPage__introduction">
           <h1>Art pieces</h1>

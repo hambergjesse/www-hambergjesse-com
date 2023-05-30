@@ -7,6 +7,8 @@ import { Navigation } from "../../components/Navigation/Navigation";
 import { Socials } from "../../components/Socials/Socials";
 import { Copyright } from "../../components/Copyright/Copyright";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
+
 const Design_Item = ({ image }: { image: string }) => {
   const [ref, inView] = useInView({ threshold: 0.5 });
 
@@ -91,6 +93,7 @@ const Design = () => {
     <main className="designPage__wrapper">
       <BrandLogo />
       <Navigation />
+      <ScrollToTop />
       <div className="designPage__container">
         <motion.section
           initial={{ opacity: 0 }}

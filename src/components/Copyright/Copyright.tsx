@@ -28,27 +28,6 @@ export const Copyright = () => {
     color: "#96979b",
   };
 
-  const bStyle: Style = {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
-    fontSize: "14px",
-    color: "#ecedf3",
-    fontWeight: "regular",
-    marginBottom: "6px",
-    cursor: "pointer",
-    gap: "6px",
-  };
-
-  // scroll to top of page on button click
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -57,15 +36,6 @@ export const Copyright = () => {
       className="copyright__container"
       style={sectStyle}
     >
-      <button
-        style={bStyle}
-        onClick={() => {
-          scrollToTop();
-        }}
-      >
-        <p style={{ color: "#FFFFFF" }}>↑</p>
-        Back to top
-      </button>
       <a href="mailto:contact@hambergjesse.com" style={aStyle}>
         contact@hambergjesse.com
       </a>

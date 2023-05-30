@@ -6,10 +6,13 @@ import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Copyright } from "../../components/Copyright/Copyright";
 import { Sections } from "./components/Sections";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
+
 const Landing = () => {
   return (
     <main className="landingPage__wrapper">
       <BrandLogo />
+      <ScrollToTop />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
@@ -10,8 +9,6 @@ import { Copyright } from "../../components/Copyright/Copyright";
 import { ScrollToTop } from "../../components/ScrollToTop";
 
 const Design_Item = ({ image }: { image: string }) => {
-  const [ref, inView] = useInView({ threshold: 0.5 });
-
   const openImage = () => {
     window.open(image, "_blank");
   };
@@ -23,13 +20,17 @@ const Design_Item = ({ image }: { image: string }) => {
 
   return (
     <motion.div
-      ref={ref}
       className="designPage__list--item"
       variants={variants}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      animate="visible"
     >
-      <img src={image} alt="randomized image" onClick={openImage} />
+      <img
+        src={image}
+        alt="randomized image"
+        onClick={openImage}
+        loading="lazy"
+      />
     </motion.div>
   );
 };

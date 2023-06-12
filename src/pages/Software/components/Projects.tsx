@@ -24,7 +24,7 @@ const Project = ({
       style={{ border: `1px solid ${borderColor}` }}
     >
       <a href={link} target="_blank" rel="noreferrer">
-        <img src={image} alt="" />
+        <img src={image} alt="" loading="lazy" />
       </a>
       <p style={{ color: "#ecedf3", fontSize: "20px", lineHeight: "24px" }}>
         <strong style={{ lineHeight: "24px" }}>{name}</strong>

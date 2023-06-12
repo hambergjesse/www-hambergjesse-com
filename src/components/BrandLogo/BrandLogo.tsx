@@ -26,6 +26,7 @@ export const BrandLogo = () => {
       src="/assets/logo.webp"
       alt="Jesse Hamberg's logo"
       onClick={() => navigate("/")}
+      loading="lazy"
     />
   );
 };

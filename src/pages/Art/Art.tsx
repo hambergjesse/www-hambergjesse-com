@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
 import { Navigation } from "../../components/Navigation/Navigation";
@@ -7,8 +7,6 @@ import { Socials } from "../../components/Socials/Socials";
 import { Copyright } from "../../components/Copyright/Copyright";
 
 import { ScrollToTop } from "../../components/ScrollToTop";
-import { useIntersectionObserver } from "../../util/useIntersectionObserver";
-
 interface ArtImage {
   image: string;
   image_lowRes: string;
@@ -70,9 +68,6 @@ const art_images: ArtImage[] = [
 ];
 
 const Art_Item = ({ image, title, desc, created, canvas }: ArtImage) => {
-  const imgRef = useRef(null);
-  const isVisible = useIntersectionObserver(imgRef, { threshold: 0.5 });
-
   const openImage = () => {
     window.open(image, "_blank");
   };
@@ -86,13 +81,14 @@ const Art_Item = ({ image, title, desc, created, canvas }: ArtImage) => {
     >
       <motion.img
         className="artPage__list--item-img"
-        src={isVisible ? image : ""}
+        src={image}
         data-src={image}
         alt={title}
         onClick={openImage}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75 }}
+        loading="lazy"
       />
       <div className="artPage__list--item-text">
         <h2>{title}</h2>

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
-import { Navigation } from "../../components/Navigation/Navigation";
 import { Socials } from "../../components/Socials/Socials";
 import { Copyright } from "../../components/Copyright/Copyright";
 
@@ -125,25 +124,8 @@ const Art = () => {
   return (
     <main className="artPage__wrapper">
       <BrandLogo />
-      <Navigation />
       <ScrollToTop />
       <div className="artPage__container">
-        <section className="artPage__introduction">
-          <h1>Art pieces</h1>
-          <p>
-            Welcome to my art portfolio, where I showcase my extensive
-            experience and passion for creating compelling visuals that are sure
-            to capture your imagination. With a diverse range of artistic
-            skills, I&apos;ve worked on a wide variety of pieces that include
-            photomanipulation art, illustrations, and paintings. My goal is
-            always to create artwork that is not only visually stunning but also
-            thought-provoking and evocative. Whether you&apos;re looking to add
-            a unique piece to your art collection or simply admire beautiful
-            artwork, my portfolio demonstrates my ability to deliver pieces that
-            are tailored to your tastes and preferences. So take a look and
-            discover a world of creativity and imagination!
-          </p>
-        </section>
         <section className="artPage__list">
           {shuffledImages.map((item, index) => (
             <Art_Item

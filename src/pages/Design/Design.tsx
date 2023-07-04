@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Background } from "../../components/Background/Background";
 import { BrandLogo } from "../../components/BrandLogo/BrandLogo";
-import { Navigation } from "../../components/Navigation/Navigation";
 import { Socials } from "../../components/Socials/Socials";
 import { Copyright } from "../../components/Copyright/Copyright";
 
@@ -93,30 +92,8 @@ const Design = () => {
   return (
     <main className="designPage__wrapper">
       <BrandLogo />
-      <Navigation />
       <ScrollToTop />
       <div className="designPage__container">
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.75 }}
-          className="designPage__introduction"
-        >
-          <h1>Design work</h1>
-          <p>
-            Welcome to my design portfolio, where I showcase my extensive
-            experience and passion for creating compelling visuals that help
-            brands stand out in their industries. With a diverse range of design
-            skills, I&apos;ve worked on everything from website design and
-            development to branding and marketing campaigns, social media
-            graphics, and album covers. My goal is always to create designs that
-            are not only visually stunning but also functional and effective in
-            achieving your goals. Whether you&apos;re looking to launch a new
-            product, revamp your brand&apos;s visual identity, or improve your
-            social media presence, my portfolio demonstrates my ability to
-            deliver tailored solutions for every project.
-          </p>
-        </motion.section>
         <section className="designPage__list">
           {shuffledImages.map((image, index) => (
             <Design_Item key={index} image={`/assets/Design/${image}`} />

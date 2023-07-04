@@ -1,9 +1,9 @@
-import { AppRouter } from "./routes/AppRouter";
+import { Router } from "./routes/Router";
 
 const App = () => {
   return (
     <div className="app__wrapper">
-      <AppRouter />
+      <Router />
     </div>
   );
 };

@@ -54,7 +54,7 @@
     "*.{ts,tsx,css,scss,md,html}": [
       "prettier --write",
       "vitest run --passWithNoTests",
-      "eslint . --ext .ts,.tsx"
+      "eslint . --ext .ts,.tsx src"
     ]
   }
 }

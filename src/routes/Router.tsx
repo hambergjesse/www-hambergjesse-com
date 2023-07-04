@@ -14,9 +14,9 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/software" element={<Software />} />
-        <Route path="/design" element={<Design />} />
-        <Route path="/art" element={<Art />} />
+        <Route path="/experience" element={<Software />} />
+        <Route path="/portfolio" element={<Design />} />
+        <Route path="/gallery" element={<Art />} />
       </Routes>
     </BrowserRouter>
   );

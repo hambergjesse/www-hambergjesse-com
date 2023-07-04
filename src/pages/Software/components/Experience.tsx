@@ -104,7 +104,7 @@ export const Experience = () => {
       transition={{ duration: 2 }}
       className="softwarePage__experience"
     >
-      <h2>Experience</h2>
+      <h2>Positions</h2>
       <div className="softwarePage__experience--list">
         {experiences.map((item, index: number) => (
           <Experience_Item

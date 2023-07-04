@@ -3,9 +3,9 @@ import { SectionInt } from "./Section_Item";
 
 export const Sections = () => {
   const sectionsList: SectionInt[] = [
-    { text: "Software", path: "/software" },
-    { text: "Design", path: "/design" },
-    { text: "Art", path: "/art" },
+    { text: "Experience", path: "/experience" },
+    { text: "Portfolio", path: "/portfolio" },
+    { text: "Gallery", path: "/gallery" },
   ];
 
   return (

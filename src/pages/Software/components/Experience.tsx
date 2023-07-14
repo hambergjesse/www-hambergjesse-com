@@ -69,7 +69,7 @@ export const Experience = () => {
       company: "Virittämö Helsinki",
       summary:
         "Developed projects using React, SCSS, Node, Express, and TypeScript for various clients, utilizing agile development methodologies to ensure on-time and on-budget delivery.",
-      duration: "Nov. 2022 — Present",
+      duration: "Nov. 2022 — Jul. 2023",
       title_color: "#F5A3C7",
     },
     {
